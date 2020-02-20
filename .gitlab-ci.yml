@@ -3,20 +3,20 @@ image: ubuntu:16.04
 build:
   stage: build
   script:
-    - echo 'Building...'
-    - echo 'This shouldn't expose private key: $PRIVATE_KEY'
+    - "echo 'Building...'"
+    - "echo 'This shouldn't expose private key: $PRIVATE_KEY'"
     
 test:
   stage: test
   script:
-    - echo 'Testing...'
-    - echo 'This shouldn't expose private key: $PRIVATE_KEY'
+    - "echo 'Testing...'"
+    - "echo 'This shouldn't expose private key: $PRIVATE_KEY'"
     
 deploy:
   stage: deploy
   script:
-    - echo 'Deploying...'
-    - echo 'This SHOULD expose private key: $PRIVATE_KEY'
+    - "echo 'Deploying...'"
+    - "echo 'This SHOULD expose private key: $PRIVATE_KEY'"
   only:
     - master
  
